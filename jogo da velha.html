@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio</title>
+</head>
+<body>
+    <div class="jogodavelha">
+        <div class="caixinha "></div>
+        <div class="caixinha "></div>
+        <div class="caixinha "></div>
+        <div class="caixinha "></div>
+        <div class="caixinha "></div>
+        <div class="caixinha "></div>
+        <div class="caixinha "></div>
+        <div class="caixinha "></div>
+        <div class="caixinha "></div>
+    </div>
+
+
+
+<style>
+.jogodavelha{
+    display: flex;
+    flex-wrap: wrap;
+    width: 306px;
+}
+
+
+.caixinha {
+    width : 100px;
+    height : 100px;
+    border : 1px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+</style>
+
+<script>
+
+
+let caixinhas = document.getElementsByClassName('caixinha')
+let jogadorAtivo = 'X'
+
+function trocarJogador () {
+        if (jogadorAtivo === 'X') {
+            jogadorAtivo = 'O'
+}        else {
+            jogadorAtivo = 'X'
+        }
+}
+
+
+for (let i = 0; i < caixinhas.length; i++) {
+ let caixinha = caixinhas[i];
+
+caixinha.addEventListener('click', function () {
+if (caixinha.innerHTML === '') {
+caixinha.innerHTML = jogadorAtivo
+
+trocarJogador ()
+        }
+    })
+}
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
