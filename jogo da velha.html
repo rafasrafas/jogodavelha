@@ -42,36 +42,38 @@
 </style>
 
 <script>
-
-
 let caixinhas = document.getElementsByClassName('caixinha')
 let jogadorAtivo = 'X'
+
 
 function trocarJogador () {
         if (jogadorAtivo === 'X') {
             jogadorAtivo = 'O'
-}        else {
+        }else {
             jogadorAtivo = 'X'
         }
 }
 
 
+function acharVencedor(){
+    if(caixinhas[0].innerHTML == caixinhas[1].innerHTML && caixinhas[0].innerHTML==caixinhas[2].innerHTML){  
+    }
+} 
+// primeira condição de vitória
+
+
 for (let i = 0; i < caixinhas.length; i++) {
- let caixinha = caixinhas[i];
+let caixinha = caixinhas[i];
 
 caixinha.addEventListener('click', function () {
-if (caixinha.innerHTML === '') {
+        if (caixinha.innerHTML === '') {
 caixinha.innerHTML = jogadorAtivo
 
-trocarJogador ()
+        acharVencedor ()
+        trocarJogador ()
         }
     })
 }
-
-
-
-
-
 
 
 
