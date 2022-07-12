@@ -56,11 +56,70 @@ function trocarJogador () {
 
 
 function acharVencedor(){
-    if(caixinhas[0].innerHTML == caixinhas[1].innerHTML && caixinhas[0].innerHTML==caixinhas[2].innerHTML){  
-        alert('vencedor') }           
-    } 
+   
+           if (
+                caixinhas[0].innerHTML !== ''
+                && caixinhas[0].innerHTML == caixinhas[1].innerHTML
+                && caixinhas[0].innerHTML == caixinhas[2].innerHTML) {
+                alert('vencedor')
+            }
 
-// primeira condição de vitória
+            if (
+                caixinhas[3].innerHTML !== ''
+                && caixinhas[3].innerHTML == caixinhas[4].innerHTML
+                && caixinhas[3].innerHTML == caixinhas[5].innerHTML) {
+                alert('vencedor')
+            }
+
+            if (
+                caixinhas[6].innerHTML !== ''
+                && caixinhas[6].innerHTML == caixinhas[7].innerHTML
+                && caixinhas[6].innerHTML == caixinhas[8].innerHTML) {
+                alert('vencedor')
+            }
+
+            if (
+                caixinhas[6].innerHTML !== ''
+                && caixinhas[6].innerHTML == caixinhas[7].innerHTML
+                && caixinhas[6].innerHTML == caixinhas[8].innerHTML) {
+                alert('vencedor')
+            }
+
+            if (
+                caixinhas[0].innerHTML !== '' && caixinhas[4].innerHTML !== '' && caixinhas[8].innerHTML !== ''
+                && caixinhas[0].innerHTML == caixinhas[4].innerHTML
+                && caixinhas[0].innerHTML == caixinhas[8].innerHTML) {
+                alert('vencedor')
+            }
+
+            if (
+                caixinhas[2].innerHTML !== '' && caixinhas[4].innerHTML !== '' && caixinhas[6].innerHTML !== ''
+                && caixinhas[2].innerHTML == caixinhas[4].innerHTML
+                && caixinhas[2].innerHTML == caixinhas[6].innerHTML) {
+                alert('vencedor')
+            }
+
+            if (
+                caixinhas[0].innerHTML !== ''
+                && caixinhas[0].innerHTML == caixinhas[3].innerHTML
+                && caixinhas[0].innerHTML == caixinhas[6].innerHTML) {
+                alert('vencedor')
+            }
+
+            if (
+                caixinhas[1].innerHTML !== ''
+                && caixinhas[1].innerHTML == caixinhas[4].innerHTML
+                && caixinhas[1].innerHTML == caixinhas[7].innerHTML) {
+                alert('vencedor')
+            }
+
+            if (
+                caixinhas[2].innerHTML !== ''
+                && caixinhas[2].innerHTML == caixinhas[5].innerHTML
+                && caixinhas[2].innerHTML == caixinhas[8].innerHTML) {
+                alert('vencedor')
+            }
+        }
 
 
 for (let i = 0; i < caixinhas.length; i++) {
