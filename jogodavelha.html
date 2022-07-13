@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio</title>
+</head>
+
+<body>
+    <div class="jogodavelha">
+        <div class="caixinha "></div>
+        <div class="caixinha "></div>
+        <div class="caixinha "></div>
+        <div class="caixinha "></div>
+        <div class="caixinha "></div>
+        <div class="caixinha "></div>
+        <div class="caixinha "></div>
+        <div class="caixinha "></div>
+        <div class="caixinha "></div>
+    </div>
+
+
+
+    <style>
+        .jogodavelha {
+            display: flex;
+            flex-wrap: wrap;
+            width: 306px;
+        }
+
+
+        .caixinha {
+            width: 100px;
+            height: 100px;
+            border: 1px solid green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+        }
+    </style>
+
+    <script>
+        
+        let caixinhas = document.getElementsByClassName('caixinha')
+        let jogadorAtivo = 'X'
+
+
+        function trocarJogador() {
+            if (jogadorAtivo === 'X') {
+                jogadorAtivo = 'O'
+            } else {
+                jogadorAtivo = 'X'
+            }
+        }           
+
+        function acharVencedor() {
+
+           
+                    
+            if (
+                caixinhas[0].innerHTML !== ''
+                && caixinhas[0].innerHTML == caixinhas[1].innerHTML
+                && caixinhas[0].innerHTML == caixinhas[2].innerHTML) {
+                alert('vencedor')
+            }
+
+            if (
+                caixinhas[3].innerHTML !== ''
+                && caixinhas[3].innerHTML == caixinhas[4].innerHTML
+                && caixinhas[3].innerHTML == caixinhas[5].innerHTML) {
+                alert('vencedor')
+            }
+
+            if (
+                caixinhas[6].innerHTML !== ''
+                && caixinhas[6].innerHTML == caixinhas[7].innerHTML
+                && caixinhas[6].innerHTML == caixinhas[8].innerHTML) {
+                alert('vencedor')
+            }
+
+            if (
+                caixinhas[6].innerHTML !== ''
+                && caixinhas[6].innerHTML == caixinhas[7].innerHTML
+                && caixinhas[6].innerHTML == caixinhas[8].innerHTML) {
+                alert('vencedor')
+            }
+
+            if (
+                caixinhas[0].innerHTML !== '' && caixinhas[4].innerHTML !== '' && caixinhas[8].innerHTML !== ''
+                && caixinhas[0].innerHTML == caixinhas[4].innerHTML
+                && caixinhas[0].innerHTML == caixinhas[8].innerHTML) {
+                alert('vencedor')
+            }
+
+            if (
+                caixinhas[2].innerHTML !== '' && caixinhas[4].innerHTML !== '' && caixinhas[6].innerHTML !== ''
+                && caixinhas[2].innerHTML == caixinhas[4].innerHTML
+                && caixinhas[2].innerHTML == caixinhas[6].innerHTML) {
+                alert('vencedor')
+            }
+
+            if (
+                caixinhas[0].innerHTML !== ''
+                && caixinhas[0].innerHTML == caixinhas[3].innerHTML
+                && caixinhas[0].innerHTML == caixinhas[6].innerHTML) {
+                alert('vencedor')
+            }
+
+            if (
+                caixinhas[1].innerHTML !== ''
+                && caixinhas[1].innerHTML == caixinhas[4].innerHTML
+                && caixinhas[1].innerHTML == caixinhas[7].innerHTML) {
+                alert('vencedor')
+            }
+
+            if (
+                caixinhas[2].innerHTML !== ''
+                && caixinhas[2].innerHTML == caixinhas[5].innerHTML
+                && caixinhas[2].innerHTML == caixinhas[8].innerHTML) {
+                alert('vencedor')
+            }
+        
+        
+        
+        }
+  
+          
+        
+        function resetar () {
+            for (let i = 0; i < caixinhas.length; i++) {
+                if (caixinhas[i].innerHTML !== '' ) {
+                    caixinhas[i].innerHTML = ''
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        function acharEmpate(){
+  
+    }
+
+
+       
+     
+       
+        for (let i = 0; i < caixinhas.length; i++) {
+            let caixinha = caixinhas[i];
+
+            caixinha.addEventListener('click', function () {
+                if (caixinha.innerHTML === '') {
+                    caixinha.innerHTML = jogadorAtivo
+                    
+                    
+                    acharVencedor()
+                    trocarJogador()
+                    resertar()
+                                                
+                }
+            })
+        }
+
+
+
+    </script>
+</body>
+
+</html>
