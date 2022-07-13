@@ -1,0 +1,16 @@
+.jogodavelha {
+    display: flex;
+    flex-wrap: wrap;
+    width: 306px;
+}
+
+
+.caixinha {
+    width: 100px;
+    height: 100px;
+    border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
